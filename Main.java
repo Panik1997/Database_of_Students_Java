@@ -9,7 +9,7 @@ public class Main {
 
         for(Iterator<Students> studentsIterator = all_students.iterator(); studentsIterator.hasNext(); ){
             Students obj2 = studentsIterator.next();
-            System.out.println(obj2.getStudent_id() + " " + obj2.getDirection() + " " + obj2.getName() + " " + obj2.getLast_name());
+            System.out.println(obj2.getStudent_id() + " " + obj2.getName() + " " + obj2.getLast_name() + " " + obj2.getDirection());
         }
     }
 
@@ -44,8 +44,11 @@ public class Main {
 
                 case 2:
                     Scanner temp = new Scanner(System.in);
+                    System.out.println("Adding new student\nDirection: ");
                     direction_text = temp.nextLine();
+                    System.out.println("Name: ");
                     name_text = temp.nextLine();
+                    System.out.println("Last name: ");
                     last_name_text = temp.nextLine();
 
                     add_student(list_of_students, new Students(direction_text, name_text, last_name_text));
@@ -53,6 +56,7 @@ public class Main {
 
                 case 3:
                     Scanner temp1 = new Scanner(System.in);
+                    System.out.println("Deleting student\nId of a student: ");
                     id_of_student = temp1.nextInt();
 
                     remove_student(list_of_students, id_of_student);
