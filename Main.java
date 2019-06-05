@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class Main {
+    
     public static void add_student(List<Students> all_students, Students new_student){
         all_students.add(new_student);
     }
 
     public static void show_students(List<Students> all_students){
-
         for(Iterator<Students> studentsIterator = all_students.iterator(); studentsIterator.hasNext(); ){
             Students obj2 = studentsIterator.next();
             System.out.println(obj2.getStudent_id() + " " + obj2.getName() + " " + obj2.getLast_name() + " " + obj2.getDirection());
@@ -37,8 +37,8 @@ public class Main {
             System.out.println("Choose an option below:\n1. Show list of students\n2. Add a student\n3. Delete a student\n4. Exit\n");
             number = num.nextInt();
             switch(number){
+                    
                 case 1:
-
                     show_students(list_of_students);
                     break;
 
@@ -63,7 +63,6 @@ public class Main {
                     break;
 
                 case 4:
-
                     check = false;
                     break;
             }
